@@ -1,0 +1,17 @@
+p.red {
+  background:red;
+  color:blue;
+  font:20pt Times;
+}
+
+div.white {
+  background:white;
+  color:red;
+  font:20pt Times;
+}
+
+span.blue {
+  background:blue;
+  color:white;
+  font:20pt Times;
+}
