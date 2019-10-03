@@ -29,7 +29,8 @@ echo "<table border><tr><th> Site name </th></tr>";
 echo "<tr bgcolor=$bg1><td>$site1_name</td><td>$site1</td></tr>";
 echo "<tr bgcolor=$bg2><td>$site2_name</td><td>$site2</td></tr>";
 echo "<tr bgcolor=$bg3><td>$site3_name</td><td>$site3</td></tr>";
-echo "<tr bgcolor=$bg3><td>$site4_name</td><td>$site4</td></tr>""</table>";
+echo "<tr bgcolor=$bg3><td>$site4_name</td><td>$site4</td></tr>";
+echo "</table>";
 
 function pickColor($value) {
   if ($value>=4) $bg="pink";
