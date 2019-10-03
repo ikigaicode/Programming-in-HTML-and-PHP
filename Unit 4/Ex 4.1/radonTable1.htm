@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Radon Table</title>
+  </head>
+
+  <body>
+    <h1>Results of Radon Testing</h1>
+
+    <p>
+      The table below show some Radon levels measured in residences. <br />
+
+      For values greater than or equal to 4 pCi/L, action should be taken <br />
+      to reduce the concentration of Radon gas.
+
+      For values greater than or <br />
+      equal to 3 pCi/L, retesting is recommended.
+    </p>
+
+    <form method="post" action="radonTable1.php">
+      <table border>
+
+        <tr bgcolor="silver">
+          <th>Location</th>
+          <th>Value, pCi/L</th>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" name="site1_name" value="basement" />
+          </td>
+
+          <td>
+            <input type="text" size="10" name="site1"/>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" name="site2_name" value="1st floor" />
+          </td>
+
+          <td>
+            <input type="text" size="10" name="site2" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" name="site3_name" value="2nd floor" />
+          </td>
+
+          <td>
+            <input type="text" size="10" name="site3" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="text" name="site4_name" value="master_bedroom" />
+          </td>
+
+          <td>
+            <input type="text" size="10" name="site4" />
+          </td>
+        </tr>
+
+      </table>
+      <input type="submit" value="Click to generate table..." />
+    </form>
+  </body>
+</html>
