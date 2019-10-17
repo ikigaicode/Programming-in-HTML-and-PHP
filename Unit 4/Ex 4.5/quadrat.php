@@ -5,9 +5,9 @@
   $d = $b * $b - 4 * $a * $c;
 
   if ($d == 0){
-    $r1 = $b / (2 * $a);
+    $r1 = -$b / (2 * $a);
     $r2 = "undefined";
-  } 
+  }
   else if ($d < 0){
     $r1 = "undefined";
     $r2 = "undefined";
