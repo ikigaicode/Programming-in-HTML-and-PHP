@@ -4,7 +4,8 @@
   $limit = 500;
 
   echo "maximun weight = " .$limit. " pounds <br />";
-    $totalWeight = 0; $maxWeight = 500;
+    $totalWeight = 0;
+    $maxWeight = 500;
 
   do {
     $newWeight = rand (0, $maxWeight);
@@ -16,7 +17,9 @@
             Total weight = " .$totalWeight. "<br />";
       $newWeight = 0;
     }
-      else echo "You weigh " .$newWeight. "pounds.
+      else {
+        echo "You weigh " .$newWeight. " pounds.
             I'm sorry, but you can't get on. <br />";
+      }
   } while (($totalWeight + $newWeight) <= $limit);
  ?>
