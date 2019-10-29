@@ -10,16 +10,13 @@
     $newWeight = rand (0, $maxWeight);
     if (($totalWeight + $newWeight) <= $limit) {
       $totalWeight += $newWeight;
+      //$totalWeight += $newWeight;
+      //$totalWeight = $totalWeight + $newWeight;
       echo "New weight = " .$newWeight. ",
             Total weight = " .$totalWeight. "<br />";
       $newWeight = 0;
     }
       else echo "You weigh " .$newWeight. "pounds.
-            I'm sorry, but you can't get on. <br />"
+            I'm sorry, but you can't get on. <br />";
   } while (($totalWeight + $newWeight) <= $limit);
  ?>
-
-
-
-//$totalWeight += $newWeight;
-//$totalWeight = $totalWeight + $newWeight;
