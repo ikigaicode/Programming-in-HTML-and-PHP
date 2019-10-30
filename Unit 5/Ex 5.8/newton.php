@@ -9,9 +9,9 @@
 
       Enter a positive number:
 
-      <input type="text" value="9" size="4" name="n" />;
+      <input type="text" value="9" size="4" name="n" />
       <br />
-      <input type="submit" value="Click to calculate square root" />;
+      <input type="submit" value="Click to calculate square root" />
 
     </form>
   </body>
