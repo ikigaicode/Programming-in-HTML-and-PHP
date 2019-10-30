@@ -18,12 +18,15 @@
 </html>
 
 <?php
-  $n = $_POST["n"];
-  $g = $n / 2;
+  if (! empty ($_POST)) {
+    $n = $_POST["n"];
+    $g = $n / 2;
 
-  do {
-    $g = ($g + $n / $g) / 2.;
-  } while (abs ($g * $g - $n) > 1e-5);
+    do {
+      $g = ($g + $n / $g) / 2.;
+    } while (abs ($g * $g - $n) > 1e-5);
 
-  echo "Square Root = " .$g. "<br />";
+    echo "Square Root = " .$g. "<br />";
+  }
+
 ?>
