@@ -23,7 +23,7 @@
 
   do {
     $g = ($g + $n / $g) / 2.;
-  } while (abs ($g * $g - $n) > 1e - 5);
+  } while (abs ($g * $g - $n) > 1e-5);
 
   echo "Square Root = " .$g. "<br />";
 ?>
