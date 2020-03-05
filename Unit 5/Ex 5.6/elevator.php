@@ -3,7 +3,7 @@
 
   $limit = 500;
 
-  echo "maximun weight = " .$limit. " pounds <br />";
+  echo "maximum weight = " .$limit. " pounds <br />";
     $totalWeight = 0;
     $maxWeight = 500;
 
