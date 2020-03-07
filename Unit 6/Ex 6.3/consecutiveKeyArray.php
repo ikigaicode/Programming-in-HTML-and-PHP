@@ -2,7 +2,7 @@
   $a = array('david', 'apple', 'Xena', 'Sue');
 
   echo "Using for...loop <br />";
-    for ($i=0; $1<sizeof($a); $i++)
+    for ($i=0; $i<sizeof($a); $i++)
       echo $a[$i] . '<br />';
 
   echo "Using implied keys with foreach...loop <br />";
