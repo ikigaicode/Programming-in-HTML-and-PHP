@@ -24,8 +24,8 @@
     $a = array(-17, "David", 33.3, "Laura");
     echo "<br /> Back to original array: <br />";
     print_r($a);
-    echo "<br /> Remove two elements from front of queue; <br />";
 
+    echo "<br /> Remove two elements from front of queue; <br />";
     array_shift($a);
     array_shift($a);
     print_r($a);
