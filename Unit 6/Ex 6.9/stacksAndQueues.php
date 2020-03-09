@@ -37,12 +37,6 @@
     echo "<br /> Add a \"line crasher\" to the beginning of the queue: <br />";
     array_unshift($a, "queue_crasher_guy");
     print_r($a);
-}
-
    ?>
   </body>
 </html>
-
-
-
-?>
