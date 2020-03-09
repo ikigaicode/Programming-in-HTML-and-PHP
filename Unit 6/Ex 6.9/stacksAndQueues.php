@@ -31,7 +31,6 @@
     print_r($a);
 
     echo "<br />Add three elements to end of queue: <br />";
-
     array_push($a, "Susan", 0.5, "new_guy");
     print_r($a);
 
