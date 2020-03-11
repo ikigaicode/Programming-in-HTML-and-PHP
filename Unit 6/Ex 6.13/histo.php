@@ -10,7 +10,9 @@
 
     // Create histogramarray.
     $h=[]; $h[0]=$n; // Use $h[0] to hold # of data points.
-    for ($i=1; $i<=$n_boxes; $i++) $h[$i]=0;
+    for ($i=1; $i<=$n_boxes; $i++){
+       $h[$i]=0;
+     }
     $dn=$range / $n_boxes;
     $out=0; // # of boxes outside of histogram range.
 
