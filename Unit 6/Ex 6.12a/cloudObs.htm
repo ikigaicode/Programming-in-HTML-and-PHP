@@ -1,0 +1,102 @@
+<html>
+  <head>
+    <title>Cloud Observations</title>
+  </head>
+  <body bgcolor="#aaddff">
+    <h1>Cloud Observations</h1>
+    <strong>Cloud Observations</strong>
+    (Select as many cloud types as observed.)
+    <br />
+
+    <form method="post" action="CloudObs.php" />
+      <table>
+        <tr>
+          <td>
+            <strong>High</strong>
+          </td>
+
+          <td>
+            <input type="checkbox" name="high[]" value="Cirrus"/>
+            Cirrus
+          </td>
+
+          <td>
+            <input type="checkbox" name="high[]" value="Cirrocumulus"/>
+            Cirrocumulus
+          </td>
+
+          <td>
+            <input type="checkbox" name="high[]" value="Cirrostratus"/>
+            Cirrostratus
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4"><hr noshade color="black"/></td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Middle</strong>
+          </td>
+
+          <td>
+            <input type="checkbox" name="mid[]" value="Altostratus"/>
+            Altostratus
+          </td>
+
+          <td>
+            <input type="checkbox" name="mid[]" value="Altocumulus"/>
+            Altocumulus
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4"><hr noshade color="black"/></td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Low</strong>
+          </td>
+
+          <td>
+            <input type="checkbox" name="low[]" value="Stratus"/>
+            Stratus
+          </td>
+
+          <td>
+            <input type="checkbox" name="low[]" value="Stratocumulus"/>
+            Stratocumulus
+          </td>
+
+          <td>
+            <input type="checkbox" name="low[]" value="Cumulus"/>
+            Cumulus
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4"><hr noshade color="black"/></td>
+        </tr>
+
+        <tr>
+          <td>
+            <strong>Rain-Producing</strong>
+          </td>
+
+          <td>
+            <input type="checkbox" name="rain[]" value="Nimbostratus"/>
+            Nimbostratus
+          </td>
+
+          <td>
+            <input type="checkbox" name="rain[]" value="Cumulonimbus"/>
+            Cumulonimbus
+          </td>
+        </tr>
+      </table>
+        <input type="submit" value="Click to process..." />
+    </form>
+  </body>
+</html>
