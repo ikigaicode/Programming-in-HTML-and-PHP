@@ -19,7 +19,7 @@
     //Fill histogram boxes.
     for ($i=0; $i<sizeof($a); $i++){
       if (($a[$i]>$high) || $a[$i]<$low) {
-        $out++
+        $out++;
       }
       else {
         if ($a[$i] == $high) {
