@@ -1,6 +1,6 @@
 <?php
 var_dump ($_POST["coeff"]);
-echo "<br />"
+echo "<br />";
 
 $coefficientArray = $_POST["coeff"];
 
