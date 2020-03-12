@@ -1,6 +1,6 @@
 <?php
   $n = 4;
-  echo "Towers of Hanoi moves for  " . $n . "rings. <br />";
+  echo "Towers of Hanoi moves for  " . $n . " rings. <br />";
   move ($n, 'A', 'C', 'B');
   function move($n, $start, $end, $intermediate){
     if ($n > 0) {
