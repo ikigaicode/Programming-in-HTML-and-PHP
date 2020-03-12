@@ -24,6 +24,8 @@
 </html>
 
 <?php
+
+  if (!empty($_POST)){
    $a = $_POST["a"];
    $e = $_POST["e"];
    $n = $_POST["n"];
