@@ -19,6 +19,7 @@
 </html>
 
 <?php
+if (!empty($_POST)){
   $T = $_POST["T"];
   $RH = $_POST["RH"] / 100.0 ; //convert from % to fraction
   $Td = getDewpoint($T, $RH);
@@ -29,5 +30,7 @@
     $Td = $b * $beta / ($a - $beta);
     return round($Td, 1);
   }
+}
+
 
  ?>
