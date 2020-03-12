@@ -14,7 +14,13 @@
 
     </form>
 
-    <?php
+  <?php
+    function nFactorial($n) {
+      if ($n <= 1) return 1;
+      else return $n * nFactorial ($n-1);
+    }
+
+    if (!empty($_POST)){
       $n = $_POST["n"];
 
       echo "max integer: " . PHP_INT_MAX . "<br />";
@@ -25,11 +31,7 @@
 
       echo $nfact . "<br />";
 
-      function nFactorial($n) {
-        if ($n <= 1) return 1;
-        else return $n * nFactorial ($n-1);
-      }
-
-    ?>
+    }
+  ?>
   </body>
 </html>
