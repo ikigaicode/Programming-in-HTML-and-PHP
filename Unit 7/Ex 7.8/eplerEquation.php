@@ -30,7 +30,7 @@
    $tau = 2.0 * pi() * $a * sqrt($a/398601.2);
    $dt = ($tau/60) / $n;
 
-   echo "Period, minutes: " . round($tau/60, 3) . "<br />"
+   echo "Period, minutes: " . round($tau/60, 3) . "<br />";
    echo "time, mean anomaly, true anomaly (deg) <br />";
 
     for ($t=0; $t<($tau/60); $t+=$dt){
