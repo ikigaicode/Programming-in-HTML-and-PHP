@@ -28,8 +28,8 @@
 
 <?php
   function getPayment($P, $r, $n){
-    $r = $r/100/12;
-    $M = $P * $r/(1-1/pow(1+$r, $n));
+    $r = $r/(100.0 * 12);
+    $M = ($P * $r)/(1.0-(1.0/pow(1.0 + $r, $n)));
     return $M;
   }
 
