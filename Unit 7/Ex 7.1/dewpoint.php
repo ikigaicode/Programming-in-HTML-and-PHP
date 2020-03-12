@@ -19,17 +19,19 @@
 </html>
 
 <?php
+function getDewpoint ($T, $RH) {
+  $a = 17.27; $b = 237.7;
+  $beta = $a * $T / ($b + $T) + log ($RH); // log() is base e-log
+  $Td = $b * $beta / ($a - $beta);
+  return round($Td, 1);
+}
+
 if (!empty($_POST)){
   $T = $_POST["T"];
   $RH = $_POST["RH"] / 100.0 ; //convert from % to fraction
   $Td = getDewpoint($T, $RH);
   echo "dew point temperature (deg C): " . $Td . "<br />";
-  function getDewpoint ($T, $RH) {
-    $a = 17.27; $b = 237.7;
-    $beta = $a * $T / ($b + $T) + log ($RH); // log() is base e-log
-    $Td = $b * $beta / ($a - $beta);
-    return round($Td, 1);
-  }
+
 }
 
 
