@@ -22,6 +22,7 @@ function circleStuff($r) {
   return $a;
 }
 
+if (!empty($_POST)){
 $r =  $_POST["r"];
 $a = []; // [0] is circumference, [1] is area
 $a = circleStuff($r);
