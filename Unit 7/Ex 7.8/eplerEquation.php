@@ -49,10 +49,10 @@
         if ($t/($tau/60) > 0.5) {
             $f=360-$f;
         }
-        echo " ".round($f,3)."<br />";
+        echo " " .round($f,3). "<br />";
     }
 
-    echo round($tau/60,3)." ".round(360,3) ." ". round(360,3)."<br />";
+    echo round($tau/60,3) . " " . round(360,3) . " " . round(360,3). "<br />";
 
     function getE($e,$M,$E) {
       $newE=$M + $e*sin($E);
@@ -62,7 +62,4 @@
       else {
         return getE($e,$M,$newE); // recursive
       }
-
-
-
 ?>
