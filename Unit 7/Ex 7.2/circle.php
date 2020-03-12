@@ -26,6 +26,6 @@ if (!empty($_POST)){
   $r =  $_POST["r"];
   $a = []; // [0] is circumference, [1] is area
   $a = circleStuff($r);
-  echo "circumference: " . $a[0] . "area: " . $a[1] . "<br />";
+  echo "circumference: " . $a[0] . "   area: " . $a[1] . "<br />";
 }
  ?>
