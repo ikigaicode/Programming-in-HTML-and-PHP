@@ -27,6 +27,13 @@
 </html>
 
 <?php
+  function getPayment($P, $r, $n){
+    $r = $r/100/12;
+    $M = $P * $r/(1-1/pow(1+$r, $n));
+    return $M;
+  }
+
+
   $P = $_POST["amount"];
   $r = $_POST["rate"];
   $n = $_POST["n"];
@@ -37,9 +44,5 @@
   echo "The total cost of your loan is $ " . round($monthlyPayment * $n, 2) .
     "<br />";
 
-  function getPayment($P, $r, $n){
-    $r = $r/100/12;
-    $M = $P * $r/(1-1/pow(1+$r, $n));
-    return $M;
-  }
+
 ?>
