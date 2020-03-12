@@ -1,6 +1,6 @@
 <?php
   $n = 8;
-  echo "Calculate the first" . $n . "Fibonacci numbers. <br />";
+  echo "Calculate the first  " . $n . "  Fibonacci numbers. <br />";
 
   for ($i=1; $i<=$n; $i++) {
     echo $i . " " . Fib($i) . "<br />";
