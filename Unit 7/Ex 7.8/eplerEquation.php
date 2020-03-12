@@ -30,13 +30,13 @@
    $e = $_POST["e"];
    $n = $_POST["n"];
    $tau = 2.0 * pi() * $a * sqrt($a/398601.2);
-   $dt = ($tau/60) / $n;
+   $dt = ($tau/60.0) / $n;
 
-   echo "Period, minutes: " . round($tau/60, 3) . "<br />";
+   echo "Period, minutes: " . round($tau/60.0, 3) . "<br />";
    echo "time, mean anomaly, true anomaly (deg) <br />";
 
-    for ($t=0; $t<($tau/60); $t+=$dt){
-      $M=2*pi()*$t*60/$tau;
+    for ($t=0; $t<($tau/60.0); $t+=$dt){
+      $M=2.0*pi()*$t*(60.0/$tau);
       echo round($t,4) . " " . round(180/pi()*$M,3);
       if ($e == 0) {
           $f=$M; // for circular orbit
@@ -64,4 +64,5 @@
       else {
         return getE($e,$M,$newE); // recursive
       }
+
 ?>
