@@ -25,7 +25,7 @@
 
 <?php
 
-  if (!empty($_POST)){
+  if (!empty($_POST)) {
    $a = $_POST["a"];
    $e = $_POST["e"];
    $n = $_POST["n"];
@@ -37,7 +37,7 @@
 
     for ($t=0; $t<($tau/60.0); $t+=$dt){
       $M=2.0*pi()*$t*(60.0/$tau);
-      echo round($t,4) . " " . round(180/pi()*$M,3);
+      echo round($t,4) . " " . round(180/pi()* $M, 3);
       if ($e == 0) {
           $f=$M; // for circular orbit
       }
@@ -64,5 +64,6 @@
       else {
         return getE($e,$M,$newE); // recursive
       }
-
+    }
+  }
 ?>
