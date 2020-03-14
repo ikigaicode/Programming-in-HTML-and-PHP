@@ -25,6 +25,16 @@
 
 <?php
 
+function getE($e,$M,$E) {
+  $newE=$M + $e*sin($E);
+  if (abs($newE-$E) < 1e-5) {
+    return $newE;
+  }
+  else {
+    return getE($e,$M,$newE); // recursive
+  }
+}
+
   if (!empty($_POST)) {
    $a = $_POST["a"];
    $e = $_POST["e"];
@@ -56,14 +66,6 @@
 
     echo round($tau/60,3) . " " . round(360,3) . " " . round(360,3). "<br />";
 
-    function getE($e,$M,$E) {
-      $newE=$M + $e*sin($E);
-      if (abs($newE-$E) < 1e-5) {
-        return $newE;
-      }
-      else {
-        return getE($e,$M,$newE); // recursive
-      }
-    }
+
   }
 ?>
