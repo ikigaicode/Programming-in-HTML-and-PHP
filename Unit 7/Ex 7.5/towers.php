@@ -7,7 +7,6 @@
       move ($n-1, $start, $intermediate, $end);
       echo "Move ring " . $n . " from " . $start . " to " . $end . "<br />";
       move ($n-1, $intermediate, $end, $start);
-
     }
   }
 
