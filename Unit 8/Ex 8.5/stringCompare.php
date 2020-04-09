@@ -6,7 +6,7 @@
   echo strcmp("DAVID", "david")."<br />";
   echo strcmp("david", "DAVID")."<br />";
   $len = min(strlen("Dave"), strlen("David"));
-  echo strcasecmp ("Dave", "David", $len)."<br />";
+  echo strncasecmp ("Dave", "David", $len)."<br />";
   echo strcmp ("Dave", "David", 3). "<br />";
   echo stristr("David", 'v')."<br />";
   echo strpos("David", 'i')."<br />";
