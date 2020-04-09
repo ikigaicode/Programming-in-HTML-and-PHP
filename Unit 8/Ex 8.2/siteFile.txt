@@ -1,0 +1,4 @@
+Site Longitude Latitude
+site1 -80.02 43.77
+site2 133.55 -18.3
+site3 0 90
