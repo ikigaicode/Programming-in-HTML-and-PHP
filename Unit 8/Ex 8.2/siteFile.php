@@ -10,7 +10,7 @@
     $line = fgets($in);
     if (strlen($line)>3){
       sscanf ($line, "%s %f %f", $site, $lon, $lat);
-      echo $site. ",".$lon.",".$lat."<br />":
+      echo $site. ",".$lon.",".$lat."<br />";
       fprintf ($out, "%s, %f, %f/n", $site, $lon, $lat);
     }
   }
