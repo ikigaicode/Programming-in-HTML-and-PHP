@@ -17,7 +17,7 @@
        }
      }
 
-  echo 'Number of missing hours this month is'.
+  echo 'Number of missing hours this month is '.
     $nMissing. ' .<br />';
   fprintf($out, "%u, %u, %u\r\n", $m, $y, $nMissing);
 }
