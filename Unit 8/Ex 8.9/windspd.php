@@ -1,5 +1,5 @@
 <?php
-  $inFile = "windspd.data";
+  $inFile = "windspd.dat";
   $outFile = "windspd.out";
   $in = fopen($inFile, "r") or die("Can't open file.");
   $out = fopen($outFile, "w");
