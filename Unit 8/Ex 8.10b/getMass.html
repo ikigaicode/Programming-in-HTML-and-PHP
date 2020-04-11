@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Calculate Mass</title>
+  </head>
+  <body>
+    <form method="post" action="getMass.php">
+      Enter lenght: <input type="text" name="L" value="3" /><br />
+      Enter width: <input type="text" name="W" value="2" /><br />
+      Enter height: <input type="text" name="H" value="10" /><br />
+      Enter radius: <input type="text" name="R" value="2" /><br />
+        <select name="shapes" size="10">
+          <option value="cube">cube</option>
+          <option value="cylinder">cylinder</option>
+          <option value="block">rectangular</option>
+          <option value="sphere">sphere</option>
+        </select>
+        <select name="material" size="10">
+          <option value="air">air</option>
+          <option value="aluminum">aluminum</option>
+          <option value="gold">gold</option>
+          <option value="oxygen">oxygen</option>
+          <option value="silver">silver</option>
+          <option value="water">water</option>
+        </select><br />
+      <input type="submit" value="Click to get density." />
+    </form>
+  </body>
+</html>

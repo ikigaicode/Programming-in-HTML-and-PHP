@@ -1,8 +1,8 @@
 <?php
   print_r($_POST);
   //exit;
-  $material = $_POST[ "material"];
-  $shape = $_POST[ "shapes"];
+  $material = $_POST["material"];
+  $shape = $_POST["shapes"];
   // exit;
   $L = $_POST["L"];
   $W = $_POST["W"];
