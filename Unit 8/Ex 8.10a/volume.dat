@@ -1,0 +1,5 @@
+shape volume
+cube $L*$L*$L
+sphere 4./3.*M_PI*$R*$R*$R
+cylinder M_PI*$R*$R*$L
+block $L*$W*$H
