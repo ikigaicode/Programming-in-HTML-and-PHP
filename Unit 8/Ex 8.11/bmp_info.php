@@ -1,7 +1,7 @@
 <?php
   $inFile = "turkey.bmp";
   // Get the size of this file.
-  echo "File size:" .$filesize($inFile). "<br />";
+  echo "File size: " .filesize($inFile). "<br />";
   $in = fopen ($inFile, 'r');
   $c = array(); //Read header.
   for ($i=0; $i<14; $i++){
