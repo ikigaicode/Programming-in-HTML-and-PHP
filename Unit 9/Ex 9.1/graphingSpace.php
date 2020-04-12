@@ -13,7 +13,7 @@
   $y0 = 170;
   // axis lengths.
   $x_length = 180;
-  $y_lenght = 120;
+  $y_length = 120;
   // create image space.
   $im = ImageCreate($x_max, $y_max) or die ("Cannot Initialize new GD image stream");
   // define colors -- first call fills background.
