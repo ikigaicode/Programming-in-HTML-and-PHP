@@ -23,12 +23,13 @@
   }
 
   echo "<br />";
+  $cols = $ch[5] * 256 + $ch[4];
   $bytes = 3 * $cols;
   $nPad  = 4 - $bytes%4;
   // Each row padded to contain a multiple of 4 bytes.
 
   echo "# of pad bytes = " .$nPad. "<br />";
-  $rows = $ch[ 9] * 256 + $c[ 8];
+  $rows = $ch[ 9] * 256 + $ch[ 8];
 
   echo "rows and columns: " .$rows. " " .$cols. "<br />";
   // Read image.
@@ -36,7 +37,7 @@
   for ($r=1; $r<=$rows; $r++){
     for ($c=1; $c<=$cols; $c++){
       for ($i=0; $i<=2; $i++){
-        $ch[$1] = fgetc($in);
+        $ch[$i] = fgetc($in);
       }
       $avg = (ord($ch[0]) + ord($ch[1]) + ord($ch[2])) / 3;
       fwrite($out, chr($avg), 1);
