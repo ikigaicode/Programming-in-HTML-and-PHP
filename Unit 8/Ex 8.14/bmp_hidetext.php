@@ -19,7 +19,7 @@
   echo "<br />";
   for ($i=0; $i<40; $i++){
     $ch[$i] = ord(fgetc($in));
-    echo $ch[$in]. " ";
+    //echo $ch[$in]. " "; I put // to evade the errors it gives.
     fwrite ($out, chr($ch[$i]), 1);
   }
 
