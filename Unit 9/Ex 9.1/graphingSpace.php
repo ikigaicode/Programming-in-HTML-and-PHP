@@ -23,7 +23,7 @@
   // display text
   ImageString($im, 5, 0, 0, "(0, 0)", $black);
   ImageString($im, 5, $x_title, $y_title, $TitleString, $black);
-  ImageString($im, 5, $x_max-80, $y_max-16, "(300, 200)", $black);
+  ImageString($im, 5, $x_max-90, $y_max-16, "(300, 200)", $black);
   // draw x-y axis.
   ImageSetThickness($im, 2);
   ImageLine($im, $x0, $y0, $x0 + $x_length, $y0, $black);
