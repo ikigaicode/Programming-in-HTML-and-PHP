@@ -9,7 +9,7 @@
                 //$A = array(60, 50, 40, 100, 50, 50, 75, 5, 10, 15, 20, 35);
 
                 //$legends = array("Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7",
-                                 "Item8", "Item9", "Item10", "Item11", "Item12");
+                //                 "Item8", "Item9", "Item10", "Item11", "Item12");
 
                 // Dimensions of plotting space.
                 //$x_max = 800;
