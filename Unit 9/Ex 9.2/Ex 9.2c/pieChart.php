@@ -88,7 +88,7 @@
                   ImageFilledRectangle($im, $x0_legend, $y0_legend + $dy_legend * $i,
                                      $x0_legend + $legend_size, $y0_legend + $dy_legend * $i +
                                      $legend_size, $PieColor[$i]);
-                  $legends[$i] = $legends[$i] ." (".number_format($A[$i], 1, ".", ",")")";
+                  $legends[$i] = $legends[$i] ." (".number_format($A[$i], 1, ".", ",").")";
                   ImageString($im, 5, $x0_legend + $legend_size + 5, $y0_legend + $dy_legend * $i + 5,
                             $legends[$i], $black);
                 }
