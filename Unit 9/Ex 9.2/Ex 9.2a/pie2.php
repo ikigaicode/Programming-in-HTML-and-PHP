@@ -39,7 +39,7 @@
   // Define colors.
   $background_color = ImageColorAllocate ($im, 234, 234, 234);
 
-  // First call filss background.
+  // First call fills background.
   $black = ImageColorAllocate($im, 0, 0, 0);
 
   // Pie section colors for up to $n_max sections.
