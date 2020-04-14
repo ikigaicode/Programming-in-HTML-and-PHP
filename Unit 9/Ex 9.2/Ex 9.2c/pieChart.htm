@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <form method="post" action="pieChart.php">
+    <h3>Pie Chart Test</h3>
+      Pie chart  data (chart title, values & legends) from:
+      <input type="text" value="pieChart.dat" name="fileName" />
+      <br />
+        Data file format: <br />
+        <font face="Courier">
+          Title <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          Value Legend <br />
+          <br />
+        </font>
+        Size of graphing space (pixels): X <input type="text" value="800"
+                                          name="$x_max" size="4" />
+                                         Y <input type="text" value="500"
+                                          name="$y_max" size="4" />
+   <br />
+       Center of pie chart (pixels): X <input type="text" name="x0" value="200"
+                                        size="0" />
+                                     Y <input type="text" name="y0" value="250"
+                                        size="4" />
+   <br />
+      Diameter of pie chart (pixels):<input type="text" name="dia" value="360"
+                                     size="4" />
+   <br />
+      Size of legend boxes (pixels):<input type="text" name="legend_size" size="3"
+                                      value="25" />
+   <br />
+   <input type="submit" value="Click here to generate pie chart from specified file. "/>
+
+    </form>
+  </body>
+</html>
