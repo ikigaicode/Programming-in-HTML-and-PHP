@@ -21,11 +21,11 @@
 
   // Starting point for title.
   $x_title = 40;
-  $y_title = 40.;
+  $y_title = 40.0;
 
   // Upper left hand corner of legend space.
-  $x_legend = 400;
-  $y_legend = 75;
+  $x0_legend = 400;
+  $y0_legend = 75;
 
   // Size of legend color boxes.
   $legend_size = 25;
@@ -82,7 +82,7 @@ for ($i=0; $i<$n; $i++){
   ImageFilledRectangle($im, $x0_legend, $y0_legend + $dy_legend * $i,
                        $x0_legend + $legend_size, $y0_legend + $dy_legend * $i +
                        $legend_size, $PieColor[$i]);
-  ImageString($im, 5, $xo_legend + $legend_size + 5, $y0_legend + $dy_legend * $i + 5,
+  ImageString($im, 5, $x0_legend + $legend_size + 5, $y0_legend + $dy_legend * $i + 5,
               $legends[$i], $black);
 }
 
