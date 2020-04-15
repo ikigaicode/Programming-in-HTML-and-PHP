@@ -53,7 +53,7 @@
 
   // Y label offsets, x-, y+.
   // x-, y+
-  $ylabel_Yoffset;
+  $ylabel_Yoffset = 5;
 
   // Calculate X offset based on length of 1st label, 9 pix/character.
   $ylabel_Xoffset = $max_YlabelLength * 9 + 5;
@@ -74,7 +74,7 @@
   $text_color = ImageColorAllocate($im, 0, 0, 0); //text color
   $line_color = ImageColorAllocate($im, 0, 0, 0); //line colors
   $horizontal_line_color = ImageColorAllocate($im, 200, 200, 200);
-  $ImageSetThickness ($im, 1);
+  ImageSetThickness ($im, 1);
 
   // Bar colors.
   $negative = ImageColorAllocate($im, 0, 0, 225);
@@ -88,7 +88,8 @@
   ImageLine($im, $x0, $y0, $x0, $y0 + $dy * ($n_y), $line_color);
   ImageLine($im, $x0 + $dx * ($n_x - 1), $y0, $x0 + $dx * ($n_x - 1),
             $y0 + $dy * ($n_y), $line_color);
-  ImageLine($im, $x0, $y0 + $dy * ($n_y), $x0 + $dx * ($n_y), $line_color);
+  ImageLine($im, $x0, $y0 + $dy * ($n_y), $x0 + $dx * ($n_x - 1),
+            $y0 + $dy * ($n_y), $line_color);
 
   // Draw chart title.
   ImageString($im, $title_font_size, $x0 + $x0_titleOffset, $y0 - $y0_titleOffset,
@@ -96,8 +97,8 @@
 
   // Draw Y labels and horizontal lines.
   for ($i=0; $i<$n_y; $i++){
-    ImageString($im, $title_font_size, $x0 - $ylabel_Xoffset, $y0 + $dy * $i +
-                $ylabel_Yoffset, $yLabels[$i], $text_color);
+    ImageString($im, $title_font_size, $x0 - $ylabel_Xoffset,
+                $y0 + $dy * $i + $ylabel_Yoffset, $yLabels[$i], $text_color);
     if ($i>0) ImageLine($im, $x0, $y0 + $dy * $i, $x0 + ($n_x - 1) * $dy,
         $y0 + $dy * $i, $horizontal_line_color);
   }
@@ -105,7 +106,7 @@
   // Draw bars.
   $xRange = $xvalue_max - $xvalue_min;
   for ($i=0; $i<$n_y; $i++){
-    $x1 = $x0 + $dx * ($n_x - 1) * ($x_Minvalues[$i] - $xvalue_min) / $xRange;
+    $x1 = $x0 + $dx * ($n_x - 1) * ($x_MinValues[$i] - $xvalue_min) / $xRange;
     $x2 = $x0 + $dx * ($n_x - 1) * (1 - ($xvalue_max - $x_MaxValues[$i]) / $xRange) ;
     if (($x_MinValues[$i] <= 0) && ($x_MaxValues[$i] <= 0)) $color  = $negative;
     elseif (($x_MinValues[$i] >= 0) && ($x_MaxValues[$i] >=0)) $color = $positive;
@@ -116,7 +117,7 @@
 
   //Draw Y labels and vertical lines.
   for ($i=0; $i<$n_x; $i++){
-    ImageString($im, $title_font_size, $x0- xlabel_Xoffset + $i * $dx,
+    ImageString($im, $title_font_size, $x0 - $xlabel_Xoffset + $i * $dx,
                 $y0 - $xlabel_Yoffset, $xLabels[$i], $text_color);
     ImageLine($im, $x0 + $i * $dx, $y0, $x0 + $i * $dx, $y0 + $dy * ($n_y),
               $line_color);
