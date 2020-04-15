@@ -1,6 +1,6 @@
 <?php
   function generatePie($Title, $A, $legends, $x_max, $y_max, $x0, $y0, $legend_size,
-              $dia, $xo_legend, $y0_legend){
+              $dia, $x0_legend, $y0_legend){
 
   Header ("Content-type: image/gif");
 
@@ -100,6 +100,8 @@
   ImageDestroy($im);
 }
 
+  //var_dump($_POST);
+
   // MAIN PROGRAM ------------------------------------
   $inFile = $_POST["fileName"];
   $x_max = $_POST["x_max"];
@@ -112,8 +114,11 @@
 
   $legend_size = $_POST["legend_size"];
 
-  $x0_legend = $_POST["x0_legend"];
-  $y0_legend = $_POST["y0_legend"];
+  //$x0_legend = $_POST["x0_legend"];
+  //$y0_legend = $_POST["y0_legend"];
+
+  $x0_legend = 400;
+  $y0_legend = 75;
 
   $in = fopen($inFile, "r") or exit ("Can't open this file.");
 
@@ -136,6 +141,6 @@
 
   fclose($in);
   generatePie($Title, $A, $legends, $x_max, $y_max, $x0, $y0, $legend_size,
-              $dia, $x0_legend, $y_legend);
+              $dia, $x0_legend, $y0_legend);
 
 ?>
