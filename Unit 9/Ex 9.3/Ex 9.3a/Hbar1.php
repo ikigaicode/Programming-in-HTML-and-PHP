@@ -107,6 +107,22 @@
   for ($i=0; $i<$n_y; $i++){
     $x1 = $x0 + $dx * ($n_x - 1) * ($x_Minvalues[$i] - $xvalue_min) / $xRange;
     $x2 = $x0 + $dx * ($n_x - 1) * (1 - ($xvalue_max - $x_MaxValues[$i]) / $xRange) ;
-    
+    if (($x_MinValues[$i] <= 0) && ($x_MaxValues[$i] <= 0)) $color  = $negative;
+    elseif (($x_MinValues[$i] >= 0) && ($x_MaxValues[$i] >=0)) $color = $positive;
+    else $color = $neutral;
+    ImageFilledRectangle ($im, $x1, $y0 + $bar_Yoffset + $i * $dy, $x2,
+                          $y0 + $bar_Yoffset + $i * $dy + $bar_height, $color);
   }
+
+  //Draw Y labels and vertical lines.
+  for ($i=0; $i<$n_x; $i++){
+    ImageString($im, $title_font_size, $x0- xlabel_Xoffset + $i * $dx,
+                $y0 - $xlabel_Yoffset, $xLabels[$i], $text_color);
+    ImageLine($im, $x0 + $i * $dx, $y0, $x0 + $i * $dx, $y0 + $dy * ($n_y),
+              $line_color);
+  }
+
+  // Create GIF image and release allocated resources.
+  ImageGIF($im);
+  ImageDestroy($im);
 ?>
