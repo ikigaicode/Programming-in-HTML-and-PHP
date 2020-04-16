@@ -1,9 +1,9 @@
 <html>
   <head>
-    <title></title>
+    <title>***</title>
   </head>
   <body>
-    <h3>Create a horizontal bar chart</h3>
+    ***<h3>Create a horizontal bar chart</h3>
     <form method="post" action="Hbarchart.php">
       <table border>
         <tr>
@@ -16,14 +16,18 @@
           <td><input size="50" type="text" name="fileName" value="Hbar.dat" /></td>
         </tr></table>
       Graphing space total size (pixels): X
-      <input type="text" name="xSize" size="4" value="800" />
-        Y <input type="text" name="ySize" size="4" value="500" /><br />
+      <input type="text" name="xSize" size="4" value="900" />
+        Y <input type="text" name="ySize" size="4" value="1000" /><br />
         Bar height (pixels):
         <input type="text" name="BarHeight" value="25" size="3" /><br />
         Vertical space between bars (pixels):
         <input type="text" name="dy" value="30" size="3" /><br />
         Horizontal space between X-axis labels (pixels):
         <input type="text" name="dx" value="50" size="3" /><br />
+        X-label x-offset (pixels to left):
+        <input type="text" name="xLabelOffset" value="20" size="3" /><br />
+        Background RGB color string:
+        <input type="text" name="colorString" value="225,225,225" size="15" /><br />
         <table border>
           <tr>
             <td>
@@ -58,6 +62,25 @@
                 green:<input type="radio" name="negativeColor" value="green"
                   size="8" /> &nbsp;
                 red:<input type="radio" name="negativeColor" value="red"
+                  size="8" />
+              </td>
+            </tr>
+        </table>
+        <table border>
+            <tr>
+              <td>
+                Neutral bar color:
+              </td>
+              <td>
+                black:<input type="radio" name="neutralColor" value="black"
+                  size="8" /> &nbsp;
+                blue:<input type="radio" name="neutralColor" value="blue"
+                  size="8" /> &nbsp;
+                grey:<input type="radio" name="neutralColor" value="grey"
+                  size="8" /> &nbsp;
+                green:<input type="radio" name="neutralColor" value="green"
+                  size="8" /> &nbsp;
+                red:<input type="radio" name="neutralColor" value="red"
                   size="8" />
               </td>
             </tr>

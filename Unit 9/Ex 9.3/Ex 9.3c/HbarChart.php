@@ -42,7 +42,7 @@
 
   // define color
   $text_color = ImageColorAllocate($im, 0, 0, 0); //text_color.
-  $text_color = ImageColorAllocate($im, 0, 0, 0); //line color.
+  $line_color = ImageColorAllocate($im, 0, 0, 0); //line color.
   $horizontal_line_color = ImageColorAllocate($im, 200, 200, 200);
   ImageSetThickness($im, 1);
 
@@ -107,7 +107,10 @@
   $s = fgets($in);
   $xLabels = explode(',', $s);
   for ($i=0; $i<count($xLabels); $i++) trim($xLabels[$i]);
+  //var_dump($xLabels);
   fscanf($in, "%f %f", $xvalue_min, $xvalue_max);
+  //var_dump($xvalue_min);
+  //var_dump($xvalue_max);
   $ny = -1;
   while (!feof($in)){
     $s = fgets($in);
@@ -116,12 +119,18 @@
       sscanf($s, "%s %f %f", $yLabels[$ny], $x_MinValues[$ny], $x_MaxValues[$ny]);
     }
   }
+  //var_dump($yLabels);
+  //var_dump($x_MinValues);
+  //var_dump($x_MaxValues);
+  //die("adios");
+
+
   fclose($in);
   //get data from HTML document.
   $positiveColor = $_POST["positiveColor"];
   $negativeColor = $_POST["negativeColor"];
   $neutralColor = $_POST["neutralColor"];
-  $colorStrings = $_POST["colorString"];
+  $colorString = $_POST["colorString"];
   $bkg = explode(',', $colorString);
   switch($positiveColor){
     case "black": $pR=0; $pG=0; $pB=0; break;
@@ -132,19 +141,19 @@
   }
 
   switch($negativeColor){
-    case "black": $pR=0; $pG=0; $pB=0; break;
-    case "blue": $pR=0; $pG=0; $pB=255; break;
-    case "green": $pR=0; $pG=255; $pB=0; break;
-    case "grey": $pR=100; $pG=100; $pB=100; break;
-    case "red": $pR=255; $pG=0; $pB=0; break;
+    case "black": $nR=0; $nG=0; $nB=0; break;
+    case "blue": $nR=0; $nG=0; $nB=255; break;
+    case "green": $nR=0; $nG=255; $nB=0; break;
+    case "grey": $nR=100; $nG=100; $nB=100; break;
+    case "red": $nR=255; $nG=0; $nB=0; break;
   }
 
-  switch($neutraleColor){
-    case "black": $pR=0; $pG=0; $pB=0; break;
-    case "blue": $pR=0; $pG=0; $pB=255; break;
-    case "green": $pR=0; $pG=255; $pB=0; break;
-    case "grey": $pR=100; $pG=100; $pB=100; break;
-    case "red": $pR=255; $pG=0; $pB=0; break;
+  switch($neutralColor){
+    case "black": $uR=0; $uG=0; $uB=0; break;
+    case "blue": $uR=0; $uG=0; $uB=255; break;
+    case "green": $uR=0; $uG=255; $uB=0; break;
+    case "grey": $uR=100; $uG=100; $uB=100; break;
+    case "red": $uR=255; $uG=0; $uB=0; break;
   }
 
   $x_max = $_POST["xSize"];
