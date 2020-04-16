@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h3>Create a horizontal bar chart</h3>
+    <form method="post" action="Hbarchart.php">
+      <table border>
+        <tr>
+          <td>Data file, format: <br />
+              Title <br />
+              X-axis labels <br />
+              Y-axis labels <br />
+              Data <br />
+              Min Max Values </td>
+          <td><input size="50" type="text" name="fileName" value="Hbar.dat" /></td>
+        </tr></table>
+      Graphing space total size (pixels): X
+      <input type="text" name="xSize" size="4" value="800" />
+        Y <input type="text" name="ySize" size="4" value="500" /><br />
+        Bar height (pixels):
+        <input type="text" name="BarHeight" value="25" size="3" /><br />
+        Vertical space between bars (pixels):
+        <input type="text" name="dy" value="30" size="3" /><br />
+        Horizontal space between X-axis labels (pixels):
+        <input type="text" name="dx" value="50" size="3" /><br />
+        <table border>
+          <tr>
+            <td>
+              &nbsp; Positive bar color:
+            </td>
+            <td>
+              black:<input type="radio" name="positiveColor" value="black"
+                size="8" /> &nbsp;
+              blue:<input type="radio" name="positiveColor" value="blue"
+                size="8" /> &nbsp;
+              grey:<input type="radio" name="positiveColor" value="grey"
+                size="8" /> &nbsp;
+              green:<input type="radio" name="positiveColor" value="green"
+                size="8" /> &nbsp;
+              red:<input type="radio" name="positiveColor" value="red"
+               size="8" checked />
+            </td>
+          </tr>
+        </table>
+        <table border>
+            <tr>
+              <td>
+                Negative bar color:
+              </td>
+              <td>
+                black:<input type="radio" name="negativeColor" value="black"
+                  size="8" /> &nbsp;
+                blue:<input type="radio" name="negativeColor" value="blue"
+                  size="8" /> &nbsp;
+                grey:<input type="radio" name="negativeColor" value="grey"
+                  size="8" /> &nbsp;
+                green:<input type="radio" name="negativeColor" value="green"
+                  size="8" /> &nbsp;
+                red:<input type="radio" name="negativeColor" value="red"
+                  size="8" />
+              </td>
+            </tr>
+        </table>
+        <input type="submit" value="Click here to generate chart." /><br />
+        <input type="reset" value="Click here to reset all fields." /><br />
+    </form>
+  </body>
+</html>
