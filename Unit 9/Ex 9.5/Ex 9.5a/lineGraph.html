@@ -1,82 +1,95 @@
 <html>
-<head><title></title></head>
-<body>
-<h3>Create a line graph</h3>
-<form method="post" action="lineGraph.php">
-<table border><tr><td>Data file, format:<br />
-Graph title<br />
-X-axis title<br />Y-axis title<br />
-X-axis labels (strings, comma-separated)<br />
-Y-axis labels (strings, comma-separated)<br />
-X<sub>min</sub> X<sub>max</sub> Y<sub>min</sub>
-Y<sub>max</sub><br />
-# of Y data sets to plot (1-3)<br />
-data: X Y1 [Y2] [Y3]<br />
-...
-</td><td><input type="text" name="fileName" size="20"
-value="lineGraph.dat" />
-</td></tr></table>
-Drawing canvas total size (pixels): X <input type="text"
-name="xCanvas" size="4" value="800" />
-Y <input type="text" name="yCanvas" size="4" value="500"
-/><br />
-graphing space (pixels): X <input type="text"
-name="xPixelRange" value="500" size="3" />
-Y <input type="text" name="yPixelRange" value="300"
-size="3" /><br />
-X-offset from left for start of graphing space (pixels):
-<input type="text" name="x0" value="100" size="3" /><br />
-Background RGB color string: <input type="text"
-name="colorString" value="225,225,225" size="10" /><br />
-<table border><tr><td>
-&nbsp;Y1 line color: </td><td>
-black:<input type="radio" name="Y1Color" value="black"
-size="8" /> &nbsp;
-blue:<input type="radio" name="Y1Color" value="blue"
-size="8" /> &nbsp;
-grey:<input type="radio" name="Y1Color" value="grey"
-size="8" /> &nbsp;
-green:<input type="radio" name="Y1Color" value="green"
-size="8" /> &nbsp;
-red:<input type="radio" name="Y1Color" value="red" size="8"
-checked />
-</td></tr></table>
-<table border><tr><td>
-Y2 line color: </td><td>
-black:<input type="radio" name="Y2Color" value="black"
-size="8" /> &nbsp;
-blue:<input type="radio" name="Y2Color" value="blue"
-size="8" /> &nbsp;
-grey:<input type="radio" name="Y2Color" value="grey"
-size="8" /> &nbsp;
-green:<input type="radio" name="Y2Color" value="green"
-size="8" checked /> &nbsp;
-red: <input type="radio" name="Y2Color" value="red"
-size="8" />
-</td></tr></table>
-<table border><tr><td>
-Y3 line color: </td><td>
-black:<input type="radio" name="Y3Color" value="black"
-size="8" /> &nbsp;
-blue:<input type="radio" name="Y3Color" value="blue"
-size="8" checked /> &nbsp;
-grey:<input type="radio" name="Y3Color" value="grey"
-size="8" /> &nbsp;
-green:<input type="radio" name="Y3Color" value="green"
-size="8" /> &nbsp;
-red:<input type="radio" name="Y3Color" value="red"
-size="8" />
-</td></tr></table>
-Symbols? Yes <input type="radio" value="Y" name="symbols"
-size="2" checked />
-No <input type="radio" value="N" name="symbols"
-size="2" />
-Lines? Yes <input type="radio" value="Y" name="line"
-size="2" checked />
-No <input type="radio" value="N" name="lines"
-size="2" /><br />
-<input type="submit"
-value="Click here to generate line graph." /><br />
-<input type="reset"
-value="Click here to reset fields to original values." /><br />
-</form></body></html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h3>Create a line graph</h3>
+    <form method="post" action="lineGraph.php">
+      <table border>
+        <tr>
+          <td>Data file, format:<br />
+        Graph title<br />
+        X-axis title<br />
+        Y-axis title<br />
+        X-axis labels (strings, comma-separated)<br />
+        Y-axis labels (strings, comma-separated)<br />
+        X<sub>min</sub> X<sub>max</sub> Y<sub>min</sub> Y<sub>max</sub><br />
+        # of Y data sets to plot (1-3)<br />
+        data: X Y1 [Y2] [Y3]<br />
+        ...
+          </td>
+          <td>
+            <input type="text" name="fileName" size="20" value="lineGraph.dat" />
+          </td>
+        </tr>
+      </table>
+
+      Drawing canvas total size (pixels):
+      X <input type="text" name="xCanvas" size="4" value="800" />
+      Y <input type="text" name="yCanvas" size="4" value="500" /><br />
+
+      graphing space (pixels):
+      X <input type="text" name="xPixelRange" value="500" size="3" />
+      Y <input type="text" name="yPixelRange" value="300" size="3" /><br />
+
+      X-offset from left for start of graphing space (pixels):
+      <input type="text" name="x0" value="100" size="3" /><br />
+
+      Background RGB color string:
+      <input type="text" name="colorString" value="225,225,225" size="10" /><br />
+
+      <table border>
+        <tr>
+          <td>
+            &nbsp;Y1 line color:
+          </td>
+          <td>
+            black:<input type="radio" name="Y1Color" value="black" size="8" /> &nbsp;
+            blue:<input type="radio" name="Y1Color" value="blue" size="8" /> &nbsp;
+            grey:<input type="radio" name="Y1Color" value="grey" size="8" /> &nbsp;
+            green:<input type="radio" name="Y1Color" value="green" size="8" /> &nbsp;
+            red:<input type="radio" name="Y1Color" value="red" size="8" checked />
+          </td>
+        </tr>
+      </table>
+      <table border>
+        <tr>
+          <td>
+            Y2 line color:
+          </td>
+          <td>
+            black:<input type="radio" name="Y2Color" value="black" size="8" /> &nbsp;
+            blue:<input type="radio" name="Y2Color" value="blue" size="8" /> &nbsp;
+            grey:<input type="radio" name="Y2Color" value="grey" size="8" /> &nbsp;
+            green:<input type="radio" name="Y2Color" value="green" size="8" checked /> &nbsp;
+            red: <input type="radio" name="Y2Color" value="red" size="8" />
+          </td>
+        </tr>
+      </table>
+      <table border>
+        <tr>
+          <td>
+            Y3 line color:
+          </td>
+          <td>
+            black:<input type="radio" name="Y3Color" value="black" size="8" /> &nbsp;
+            blue:<input type="radio" name="Y3Color" value="blue" size="8" checked /> &nbsp;
+            grey:<input type="radio" name="Y3Color" value="grey" size="8" /> &nbsp;
+            green:<input type="radio" name="Y3Color" value="green" size="8" /> &nbsp;
+            red:<input type="radio" name="Y3Color" value="red" size="8" />
+          </td>
+        </tr>
+      </table>
+
+      Symbols?
+      Yes <input type="radio" value="Y" name="symbols" size="2" checked />
+      No <input type="radio" value="N" name="symbols" size="2" />
+      Lines?
+      Yes <input type="radio" value="Y" name="line" size="2" checked />
+      No <input type="radio" value="N" name="lines" size="2" /><br />
+
+      <input type="submit" value="Click here to generate line graph." /><br />
+      <input type="reset" value="Click here to reset fields to original values." /><br />
+    </form>
+  </body>
+</html>
