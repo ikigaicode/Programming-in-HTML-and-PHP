@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h3>Create a vertical bar chart</h3>
+    <form method="post" action="VbarChart.php">
+      <table>
+        <tr>
+          <td>Data file, format:<br />
+            Chart title <br />
+            X-axis title<br />
+            Y-axis title<br />
+            Y-axis labels (string, comma-separated) <br />
+            Minimum/maximum allow Y-values <br />
+            X-axis labels (strings) X<sub>min</sub>X<sub>max</sub><br />
+            <br />...<br />
+          </td>
+          <td>
+            <input type="text" name="fileName" size="20" value="Vbar.dat"/>
+          </td>
+        </tr>
+      </table>
+      Drawing canvas total size (pixels):
+      X <input type="text" name="xCanvas" size="4" value="800" />
+      Y <input type="text" name="yCanvas" size="4" value="500" /> <br />
+
+      Graphing space (pixels):
+      X <input type="text" name="xRange" value="500" size="3" />
+      Y <input type="text" name="yRange" value="300" size="3" /> <br />
+
+      X-offset from left of canvas for start of graphing space (pixels):
+      <input type="text" name="x0" value="100" size="3" /><br />
+
+      Bar width (% of x-axis unit):
+      <input type="text" name="barWidth" value="75" size="3" /><br />
+
+      Background RGB color string:
+      <input type="text" name="colorString" value="225,225,225" size="10" /><br />
+
+      <table border>
+        <tr>
+          <td>
+            &nbsp; Positive bar color:
+          </td>
+          <td>
+            black:<input type="radio" name="positiveColor" value="black" size="8" /> &nbsp;
+            blue:<input type="radio" name="positiveColor" value="blue" size="8" /> &nbsp;
+            grey:<input type="radio" name="positiveColor" value="grey" size="8" /> &nbsp;
+            green:<input type="radio" name="positiveColor" value="green" size="8" /> &nbsp;
+            red:<input type="radio" name="positiveColor" value="red" size="8" checked />
+          </td>
+        </tr>
+      </table>
+      <table border>
+        <tr>
+          <td>
+            &nbsp; Negative bar color:
+          </td>
+          <td>
+            black:<input type="radio" name="negativeColor" value="black" size="8" /> &nbsp;
+            blue:<input type="radio" name="negativeColor" value="blue" size="8" /> &nbsp;
+            grey:<input type="radio" name="negativeColor" value="grey" size="8" /> &nbsp;
+            green:<input type="radio" name="negativeColor" value="green" size="8" /> &nbsp;
+            red:<input type="radio" name="negativeColor" value="red" size="8" />
+          </td>
+        </tr>
+      </table>
+      <table border>
+        <tr>
+          <td>
+            &nbsp; Neutral bar color:
+          </td>
+          <td>
+            black:<input type="radio" name="neutralColor" value="black" size="8" /> &nbsp;
+            blue:<input type="radio" name="neutralColor" value="blue" size="8" /> &nbsp;
+            grey:<input type="radio" name="neutralColor" value="grey" size="8" /> &nbsp;
+            green:<input type="radio" name="neutralColor" value="green" size="8" /> &nbsp;
+            red:<input type="radio" name="neutralColor" value="red" size="8" />
+          </td>
+        </tr>
+      </table>
+      <input type="submit" value="Click here to generate vertical bar chart."/><br />
+      <input type="reset" value="Click here to reset all fields to their original values."/><br />
+    </form>
+  </body>
+</html>
