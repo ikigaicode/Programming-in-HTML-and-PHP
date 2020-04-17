@@ -10,7 +10,7 @@
   $y0 = 40;
 
   $im = ImageCreate($x_max, $y_max) or die ("Cannot Initialize new GD image stream");
-  $background_color = ImageCollorAllocate($im, 200, 200, 200);
+  $background_color = ImageColorAllocate($im, 200, 200, 200);
 
   // Define text color
   $navy = ImageColorAllocate($im, 0, 0, 150);
