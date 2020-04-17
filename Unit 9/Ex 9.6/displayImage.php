@@ -1,7 +1,7 @@
 <?php
   Header ("Content-type: image/gif");
 
-  &TitleString = "Institute for Earth Science Research and Education";
+  $TitleString = "Institute for Earth Science Research and Education";
 
   $x_max = 600;
   $y_max = 400;
