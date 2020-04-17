@@ -1,17 +1,14 @@
-Some random monthly data.
-Month
-Random data values.
--3.0,-2.5,-2.0,-1.5,-1.0,-0.5,0.0,+0.5,+1.0,+1.5,+2.0,+2.5,+3.0,+3.5
--3 3.5
-Jan 1.3 1.5
-Feb 0.9 1.9
-Mar -0.2 1.1
-Apr -2.0 -0.5
-May 1 2.9
-June -1.1 3.5
-Jul -0.5 1.7
-Aug 0.6 2.2
-Sep 3.0 3.5
-Oct 0.7 1.9
-Nov -2.9 0.1
-Dec 0 3.2
+Tempearature data, Philadelphia, PA
+Days, December 2015
+Temperature, deg F, (max, min, avg)
+0,5,10,15,20,25,30,35
+20,25,30,35,40,45,50,55,60,65,70,75,80
+0 40 20 90
+3
+0 45 50 55
+5 35 43 52
+10 45 54 63
+15 49 59 79
+20 30 37 42
+25 57 62 67
+30 47 49 53

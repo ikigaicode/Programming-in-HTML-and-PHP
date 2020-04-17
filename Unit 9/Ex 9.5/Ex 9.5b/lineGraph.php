@@ -132,6 +132,8 @@ $xLabels = explode(',', $s);
 $s = fgets($in); // y value labels
 $yLabels = explode(',', $s);
 
+//var_dump($yLabels);
+
 fscanf($in, "%f %f %f %f", $xMin, $xMax, $yMin, $yMax);
 fscanf($in, "%u", $n_Ydata);
 $i = -1;
