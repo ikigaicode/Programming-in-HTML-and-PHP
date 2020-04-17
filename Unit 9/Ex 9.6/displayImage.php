@@ -1,5 +1,5 @@
 <?php
-  Header ("Content-type: image/gif");
+  //Header ("Content-type: image/gif");
 
   $TitleString = "Institute for Earth Science Research and Education";
 
